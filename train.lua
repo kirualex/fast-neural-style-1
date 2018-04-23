@@ -298,9 +298,9 @@ cmd:option('-backend', 'cuda', 'cuda|opencl')
 
       -- Save a torch checkpoint; convert the model to float first
       model:clearState()
-      if use_cudnn then
-        cudnn.convert(model, nn)
-      end
+      -- if use_cudnn then
+      --   cudnn.convert(model, nn)
+      -- end
       model:float()
       checkpoint.model = model
       filename = string.format('%s.t7', opt.checkpoint_name)

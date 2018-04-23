@@ -19,6 +19,7 @@ th train.lua \
 -h5_file ~/Documents/data/datasets/fast_dataset.h5 \
 -style_image ~/Documents/data/images/styles/filter_watercolor2.jpg \
 -checkpoint_name ~/Documents/data/models/fast_checkpoint \
+-loss_network ~/Documents/data/models/vgg16.t7 \
 -checkpoint_every 500 \
 -style_image_size 500 \
 -content_weights 1.0 \

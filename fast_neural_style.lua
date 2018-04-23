@@ -8,7 +8,6 @@ require 'fast_neural_style.InstanceNormalization'
 local utils = require 'fast_neural_style.utils'
 local preprocess = require 'fast_neural_style.preprocess'
 
-
 --[[
 Use a trained feedforward model to stylize either a single image or an entire
 directory of images.
@@ -19,7 +18,7 @@ local cmd = torch.CmdLine()
 -- Model options
 cmd:option('-model', 'models/instance_norm/candy.t7')
 cmd:option('-image_size', 768)
-cmd:option('-median_filter', 3)
+cmd:option('-median_filter', 2)
 cmd:option('-timing', 0)
 
 -- Input / output options

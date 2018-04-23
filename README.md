@@ -20,8 +20,9 @@ th train.lua \
 -style_image ~/Documents/data/images/styles/filter_outrun.jpg \
 -checkpoint_name ~/Documents/data/models/fast_checkpoint \
 -loss_network ~/Documents/data/models/vgg16.t7 \
--checkpoint_every 250 \
--style_image_size 500 \
+-arch c9s1-16,d32,d64,R64,R64,R64,R64,R64,u32,u16,c9s1-3 \
+-checkpoint_every 100 \
+-style_image_size 256 \
 -content_weights 1.0 \
 -style_weights 5.0 \
 -learning_rate 1e-3 \
@@ -33,6 +34,7 @@ th train.lua \
 ### Stylize test
 ```
 th fast_neural_style.lua \
+-image_size 720 \
 -model ~/Documents/data/models/fast_checkpoint.t7 \
 -input_image ~/Documents/data/images/test.jpg \
 -output_image ~/Documents/data/images/stylized-test.jpg

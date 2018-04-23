@@ -97,7 +97,6 @@ cmd:option('-backend', 'cuda', 'cuda|opencl')
   end
   if use_cudnn then cudnn.convert(model, cudnn) end
   model:training()
-  print(model)
   
   -- Set up the pixel loss function
   local pixel_crit

@@ -1,4 +1,4 @@
-# Fast-neural-style
+# torch-fns
 
 
 ### Create Dataset (needed once)
@@ -17,13 +17,14 @@ python scripts/make_style_dataset.py \
 ```
 th train.lua \
 -h5_file ~/Documents/data/datasets/fast_dataset.h5 \
--style_image ~/Documents/data/images/styles/filter_watercolor2.jpg \
+-style_image ~/Documents/data/images/styles/filter_outrun.jpg \
 -checkpoint_name ~/Documents/data/models/fast_checkpoint \
 -loss_network ~/Documents/data/models/vgg16.t7 \
--checkpoint_every 500 \
+-checkpoint_every 250 \
 -style_image_size 500 \
 -content_weights 1.0 \
--style_weights 4.0 \
+-style_weights 5.0 \
+-learning_rate 1e-3 \
 -batch_size 1 \
 -num_iterations 6000 \
 -resume_from_checkpoint ~/Documents/data/models/fast_checkpoint.t7

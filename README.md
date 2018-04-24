@@ -20,7 +20,6 @@ th train.lua \
 -style_image ~/Documents/data/images/styles/filter_outrun.jpg \
 -checkpoint_name ~/Documents/data/models/fast_checkpoint \
 -loss_network ~/Documents/data/models/vgg16.t7 \
--arch c9s1-16,d32,d64,R64,R64,R64,R64,R64,u32,u16,c9s1-3 \
 -checkpoint_every 100 \
 -style_image_size 256 \
 -content_weights 1.0 \

@@ -148,24 +148,23 @@ def main():
         image_input_names=['inputImage'],
         preprocessing_args={
             'is_bgr': True,
-            'red_bias': -123.68,
-            'green_bias': -116.779,
-            'blue_bias': -103.939
+            'red_bias': -123.67,
+            'green_bias': -116.780,
+            'blue_bias': -103.940
         },
         image_output_names=['outputImage'],
         deprocessing_args={
             'is_bgr': True,
-            'red_bias': 123.68,
-            'green_bias': 116.779,
-            'blue_bias': 103.939
+            'red_bias': 123.67,
+            'green_bias': 116.780,
+            'blue_bias': 103.940
         },
         unknown_layer_converter_fn=convert_instance_norm
     )
 
-    coreml_model.author = 'Justin Johnson'
-    coreml_model.license = 'Free for personal or research use'
-    coreml_model.short_description = 'Feedforward style transfer \
-https://github.com/jcjohnson/fast-neural-style'
+    coreml_model.author = 'Alexis Creuzot'
+    coreml_model.license = 'Free for personal use'
+    coreml_model.short_description = 'Custom FFST'
     coreml_model.input_description['inputImage'] = 'Image to stylize'
     coreml_model.output_description['outputImage'] = 'Stylized image'
 
